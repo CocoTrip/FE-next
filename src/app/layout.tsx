@@ -1,16 +1,19 @@
-import { Inter } from 'next/font/google';
+import React from 'react';
 import './globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
-
+import { Noto_Sans_KR } from 'next/font/google';
+const NOTO_SANS_KR = Noto_Sans_KR({
+  preload: true,
+  subsets: ['latin'],
+  weight: ['100', '400', '700', '900'],
+});
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ko">
+      <body className={NOTO_SANS_KR.className}>{children}</body>
     </html>
   );
 }
