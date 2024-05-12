@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useRef } from 'react';
 
 const useInfiniteScroll = (callback: () => void, hasMore: boolean) => {

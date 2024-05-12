@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Post } from '@/shared';
 import { useCallback, useEffect, useState } from 'react';
 import { fetchPosts } from '../api/posts';
