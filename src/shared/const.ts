@@ -9,3 +9,5 @@ export const CATEGORIES: Categories = {
 };
 
 export const FORUMBASEURL: string = '/forum/';
+
+export const PAGE_SIZE = 5;

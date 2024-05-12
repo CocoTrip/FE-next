@@ -1,3 +1,5 @@
-import { CATEGORIES, FORUMBASEURL } from './const/forum';
+import { CATEGORIES, FORUMBASEURL, PAGE_SIZE } from './const';
+import { Post } from './types';
 
-export { CATEGORIES, FORUMBASEURL };
+export { CATEGORIES, PAGE_SIZE, FORUMBASEURL };
+export type { Post };
