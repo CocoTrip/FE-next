@@ -37,9 +37,7 @@ const CategoryButton: React.FC<CategoryButtonProps> = memo(
   ({ category, selectedCategory, onCategorySelect }: CategoryButtonProps) => (
     <button
       type="button"
-      className={
-        selectedCategory === category ? 'bg-violet-100' : 'bg-gray-100'
-      }
+      className={`bg-black ${selectedCategory === category ? 'bg-violet-100' : 'bg-gray-100'}`}
       onClick={() => onCategorySelect(category)}
     >
       {category ?? '전체'}
