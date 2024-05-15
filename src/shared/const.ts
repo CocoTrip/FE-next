@@ -8,6 +8,6 @@ export const CATEGORIES: Categories = {
   free: '자유게시판',
 };
 
-export const FORUMBASEURL: string = '/forum/';
+export const FORUM_BASE_URL: string = '/forum/';
 
 export const PAGE_SIZE = 5;

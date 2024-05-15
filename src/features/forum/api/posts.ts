@@ -4,7 +4,7 @@ import { PAGE_SIZE, Post } from '@/shared';
 import fs from 'fs';
 import path from 'path';
 
-async function fetchPosts(category: string, page: number): Promise<Post[]> {
+export async function fetchPosts(category: string, page: number): Promise<Post[]> {
   const filePath = path.join(
     process.cwd(),
     'src',
@@ -32,4 +32,3 @@ async function fetchPosts(category: string, page: number): Promise<Post[]> {
   return pagenatedPosts;
 }
 
-export { fetchPosts };

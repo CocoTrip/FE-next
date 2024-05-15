@@ -1,6 +1,6 @@
 'use client';
 
-import { FORUMBASEURL } from '@/shared';
+import { FORUM_BASE_URL } from '@/shared';
 import Link from 'next/link';
 
 export default function Category({
@@ -16,7 +16,7 @@ export default function Category({
     <li
       className={`text-lg font-bold text-slate-400 ${isCurrentCategory ? 'text-slate-950 ' : ''}`}
     >
-      <Link href={FORUMBASEURL + categoryKey}>{category}</Link>
+      <Link href={FORUM_BASE_URL + categoryKey}>{category}</Link>
     </li>
   );
 }

@@ -1,5 +1,5 @@
-import ForumNav from '../ui/Nav';
-import ForumPostList from '../ui/PostList';
+import ForumNav from '../../../widgets/forum/ui/Nav';
+import ForumPostList from '../../../widgets/forum/ui/PostList';
 
 export default function ForumPage({
   params: { category },

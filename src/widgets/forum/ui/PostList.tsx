@@ -3,8 +3,8 @@
 import useInfiniteScroll from '@/shared/hooks/useInfiniteScroll';
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
-import useForumPosts from '../model/useForumPosts';
-import PostCard from './PostCard';
+import useForumPosts from '@/features/forum/model/useForumPosts';
+import PostCard from '../../../entities/forum/ui/PostCard';
 
 export default function ForumPostList() {
   const pathName = usePathname();
