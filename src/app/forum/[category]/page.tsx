@@ -1,5 +1,5 @@
-import HotPostsSlide from '@/widgets/forum/ui/HotPostsSlide';
 import ForumPostList from '@/widgets/forum/ui/PostList';
+import { HotPostsSlider } from '@/widgets';
 import ForumNav from '../../../widgets/forum/ui/Nav';
 
 export default function ForumPage({
@@ -17,7 +17,7 @@ export default function ForumPage({
       </div>
       <div className="mt-20  flex w-full flex-col items-start space-y-4">
         <h3 className="text-2xl font-bold">HOT 게시물</h3>
-        <HotPostsSlide />
+        <HotPostsSlider />
       </div>
       <div className="mb-4 mt-8 h-1 w-full border-t " />
       <div>

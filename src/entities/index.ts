@@ -1,1 +1,1 @@
-export { default as PostCard } from './forum/ui/_PostCard';
+export { default as PostCard } from './forum/ui/PostCard';

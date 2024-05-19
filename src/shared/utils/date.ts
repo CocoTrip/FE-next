@@ -1,5 +1,4 @@
 export const formatDate = (date: Date): string => {
-  console.dir(typeof date);
   const currentDate = new Date();
   const diffInMillisenconds = currentDate.getTime() - date.getTime();
   const diffInHours = Math.floor(diffInMillisenconds / (1000 * 60 * 60));
