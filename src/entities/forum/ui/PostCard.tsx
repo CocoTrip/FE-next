@@ -1,4 +1,4 @@
-import { CATEGORIES, Post } from '@/shared';
+import { CATEGORIES, formatDate, Post } from '@/shared';
 import Image from 'next/image';
 
 export default function PostCard({ post }: { post: Post }) {
@@ -6,13 +6,13 @@ export default function PostCard({ post }: { post: Post }) {
     <li className=" flex h-[236px] w-full items-center border-b px-4 py-8">
       <div className="grow space-y-4">
         <div className="flex items-center">
-          <div className="ml-2 mr-8 h-[50px] w-[50px] rounded-full bg-gray-200">
+          <div className="ml-2 mr-8 h-[50px] w-[50px] rounded-full bg-gray-100">
             <Image />
           </div>
           <div>
             <p>{post.writer}</p>
             <p className="text-sm text-gray-400">
-              {new Date(post.createdAt).toLocaleDateString()}
+              {formatDate(new Date(post.createdAt))}
             </p>
           </div>
         </div>
@@ -29,7 +29,7 @@ export default function PostCard({ post }: { post: Post }) {
           </div>
         </div>
       </div>
-      <div className="ml-12 mr-8 h-[128px] w-[128px] bg-gray-200">
+      <div className="ml-12 mr-8 h-[128px] w-[128px] bg-gray-100">
         <Image />
       </div>
     </li>
