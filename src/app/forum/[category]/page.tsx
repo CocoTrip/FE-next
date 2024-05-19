@@ -1,5 +1,6 @@
+import HotPostsSlide from '@/widgets/forum/ui/HotPostsSlide';
+import ForumPostList from '@/widgets/forum/ui/PostList';
 import ForumNav from '../../../widgets/forum/ui/Nav';
-import ForumPostList from '../../../widgets/forum/ui/PostList';
 
 export default function ForumPage({
   params: { category },
@@ -7,19 +8,23 @@ export default function ForumPage({
   params: { category: string };
 }) {
   return (
-    <div className="flex justify-between">
-      <div className="w-[300px] space-y-8">
-        <div className="space-y-0.5">
-          <h2 className="text-2xl font-bold">위드펫 커뮤니티</h2>
-          <p className="text-slate-500">
-            반려동물 동반 여행 이야기를
-            <br />
-            위드펫 사용자와 공유해보세요.
-          </p>
-        </div>
+    <div className="flex flex-col items-center ">
+      <div className="space-y-6">
+        <h2 className="text-center text-4xl font-bold">커뮤니티</h2>
+        <p className="text-lg">
+          반려인과 반려동물을 위한 정보를 함께 공유해보세요!
+        </p>
+      </div>
+      <div className="mt-20  flex w-full flex-col items-start space-y-4">
+        <h3 className="text-2xl font-bold">HOT 게시물</h3>
+        <HotPostsSlide />
+      </div>
+      <div className="mb-4 mt-8 h-1 w-full border-t " />
+      <div>
         <ForumNav category={category} />
       </div>
-      <div className="w-[650px]">
+
+      <div className="mt-8 w-full">
         <ForumPostList />
       </div>
     </div>

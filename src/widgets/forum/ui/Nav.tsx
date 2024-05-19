@@ -8,7 +8,7 @@ export default function ForumNav({
 }) {
   return (
     <nav aria-label="Forum Category">
-      <ul className="space-y-2">
+      <ul className="flex space-x-[50px]">
         {Object.keys(CATEGORIES).map(categoryKey => (
           <Category
             key={categoryKey}
