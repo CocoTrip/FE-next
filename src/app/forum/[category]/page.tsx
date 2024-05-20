@@ -1,6 +1,4 @@
-import ForumPostList from '@/widgets/forum/ui/PostList';
-import { HotPostsSlider } from '@/widgets';
-import ForumNav from '../../../widgets/forum/ui/Nav';
+import { ForumNav, HotPostsSlider, ForumPostList } from '@/widgets';
 
 export default function ForumPage({
   params: { category },

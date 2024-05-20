@@ -1,10 +1,11 @@
 'use client';
 
-import useInfiniteScroll from '@/shared/hooks/useInfiniteScroll';
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
-import useForumPosts from '@/features/forum/model/useForumPosts';
-import PostCard from '@/entities/forum/ui/PostCard';
+
+import { useInfiniteScroll } from '@/shared';
+import { useForumPosts } from '@/features';
+import { PostCard } from '@/entities';
 
 export default function ForumPostList() {
   const pathName = usePathname();
