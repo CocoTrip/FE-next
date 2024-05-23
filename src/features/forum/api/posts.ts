@@ -46,7 +46,7 @@ export async function fetchPost(postId: number): Promise<Post> {
 
   const jsonData = await fs.promises.readFile(filePath, 'utf8');
   const posts: Post[] = JSON.parse(jsonData);
-  const filteredPost: Post = posts.filter(post => post.postId === postId)[0];
-
-  return filteredPost;
+  console.log(posts);
+  const filteredPost: Post[] = posts.filter(post => post.postId === postId);
+  console.log(filteredPost, postId);
 }

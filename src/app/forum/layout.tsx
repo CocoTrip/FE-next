@@ -1,4 +1,5 @@
 import React from 'react';
+import { AppProviders } from '../AppProviders';
 
 export default function ForumLayout({
   children,
@@ -7,7 +8,7 @@ export default function ForumLayout({
 }) {
   return (
     <div className="mx-auto max-w-[1024px] px-6 py-8 text-slate-900">
-      {children}
+      <AppProviders>{children}</AppProviders>
     </div>
   );
 }
