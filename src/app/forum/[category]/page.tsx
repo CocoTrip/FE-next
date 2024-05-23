@@ -14,7 +14,7 @@ export default function ForumPage({
         </p>
       </div>
       <div className="mt-20  flex w-full flex-col items-start space-y-4">
-        <h3 className="text-2xl font-bold">HOT 게시물</h3>
+        <h3 className="ml-10 text-2xl font-bold">HOT 게시물</h3>
         <HotPostsSlider />
       </div>
       <div className="mb-4 mt-8 h-1 w-full border-t " />

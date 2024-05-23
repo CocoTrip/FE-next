@@ -1,5 +1,6 @@
 import { CATEGORIES, formatDate, Post } from '@/shared';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function PostCard({ post }: { post: Post }) {
   return (
@@ -17,8 +18,10 @@ export default function PostCard({ post }: { post: Post }) {
           </div>
         </div>
         <div className="space-y-2">
-          <p className="text-[18px] font-bold">{post.title}</p>
-          <p className="text-gray-500">{post.contents}</p>
+          <Link href={`/forum/posts/${post.postId}`} className="space-y-2">
+            <p className="text-[18px] font-bold">{post.title}</p>
+            <p className="text-gray-500">{post.contents}</p>
+          </Link>
         </div>
         <div className="flex justify-end space-x-4 text-sm">
           <div>
