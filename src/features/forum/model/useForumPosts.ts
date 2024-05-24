@@ -3,7 +3,6 @@ import { Post } from '@/shared';
 import { useCallback, useEffect, useState } from 'react';
 import { fetchPosts } from '../api/posts';
 
-
 const useForumPosts = () => {
   const [posts, setPosts] = useState<Post[]>([]);
   const [page, setPage] = useState<number>(1);

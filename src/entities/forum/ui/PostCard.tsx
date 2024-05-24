@@ -23,7 +23,7 @@ export default function PostCard({ post }: { post: Post }) {
         </div>
         <div className="space-y-2">
           <Link
-            href={`${FORUM_BASE_URL}/${post.category}/${post.postId}?prev_url=${encodeURIComponent(pathName)}}`}
+            href={`${FORUM_BASE_URL}/posts/${post.postId}?prev_url=${encodeURIComponent(pathName)}}`}
             className="space-y-2"
           >
             <p className="text-[18px] font-bold">{post.title}</p>
