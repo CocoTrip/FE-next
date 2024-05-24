@@ -1,16 +1,11 @@
 import { ForumNav, ForumPostList } from '@/widgets';
 
-export default function ForumPage({
-  params: { category },
-}: {
-  params: { category: string };
-}) {
+export default function ForumPage() {
   return (
     <>
       <div>
-        <ForumNav category={category} />
+        <ForumNav category="all" />
       </div>
-
       <div className="mt-8 w-full">
         <ForumPostList />
       </div>

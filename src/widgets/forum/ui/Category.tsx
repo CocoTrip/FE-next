@@ -16,7 +16,11 @@ export default function Category({
     <li
       className={`text-lg font-bold text-slate-400 ${isCurrentCategory ? 'text-slate-950 ' : ''}`}
     >
-      <Link href={FORUM_BASE_URL + categoryKey}>{category}</Link>
+      <Link
+        href={`${FORUM_BASE_URL + (categoryKey === 'all' ? '' : categoryKey)}`}
+      >
+        {category}
+      </Link>
     </li>
   );
 }

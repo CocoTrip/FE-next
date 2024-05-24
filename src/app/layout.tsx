@@ -1,6 +1,7 @@
 import React from 'react';
 import './globals.css';
 import { Noto_Sans_KR } from 'next/font/google';
+import { AppProviders } from './AppProviders';
 
 const NOTO_SANS_KR = Noto_Sans_KR({
   preload: true,
@@ -14,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={NOTO_SANS_KR.className}>{children}</body>
+      <body className={NOTO_SANS_KR.className}>
+        <AppProviders>{children}</AppProviders>
+      </body>
     </html>
   );
 }

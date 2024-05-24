@@ -18,7 +18,11 @@ export default function ForumPostList() {
 
   useEffect(() => {
     const splitedPathName: string[] = pathName.split('/');
-    setCategory(splitedPathName[splitedPathName.length - 1]);
+    setCategory(
+      splitedPathName[splitedPathName.length - 1] === 'forum'
+        ? 'all'
+        : splitedPathName[splitedPathName.length - 1],
+    );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathName]);
 

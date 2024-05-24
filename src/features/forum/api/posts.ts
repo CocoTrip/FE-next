@@ -35,7 +35,7 @@ export async function fetchPosts(
   return pagenatedPosts;
 }
 
-export async function fetchPost(postId: number): Promise<Post> {
+export async function fetchPost(postId: number): Promise<Post | undefined> {
   const filePath = path.join(
     process.cwd(),
     'src',
@@ -46,7 +46,8 @@ export async function fetchPost(postId: number): Promise<Post> {
 
   const jsonData = await fs.promises.readFile(filePath, 'utf8');
   const posts: Post[] = JSON.parse(jsonData);
-  console.log(posts);
-  const filteredPost: Post[] = posts.filter(post => post.postId === postId);
-  console.log(filteredPost, postId);
+  const filteredPost: Post | undefined = posts.find(
+    post => post.postId === Number(postId),
+  );
+  return filteredPost;
 }
