@@ -11,3 +11,10 @@ export interface Post {
   viewCount: number;
   status: 'active' | 'deleted';
 }
+
+export interface Comment {
+  commentId: number;
+  author: string;
+  date: string;
+  content: string;
+}

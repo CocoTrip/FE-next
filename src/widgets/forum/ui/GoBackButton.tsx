@@ -6,8 +6,9 @@ export default function GoBackButton({ prevUrl }: { prevUrl: string }) {
   const prevPage: string =
     routes[routes.length - 1] === 'home' ? '홈' : '커뮤니티';
   return (
-    <Link href={prevUrl} className="space-x-2">
-      <GrPrevious /> <span>{prevPage}</span>
+    <Link href={prevUrl} className="relative flex items-center">
+      <GrPrevious className="absolute left-[-40px] text-3xl" />{' '}
+      <span>{prevPage}</span>
     </Link>
   );
 }

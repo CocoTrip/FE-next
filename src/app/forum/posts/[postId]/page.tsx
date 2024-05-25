@@ -1,21 +1,43 @@
 'use client';
 
-import { useForumPost } from '@/features';
+import { Likes, useForumPost } from '@/features';
 import { Loading } from '@/shared';
-import { GoBackButton } from '@/widgets';
+import {
+  CommentCreater,
+  Comments,
+  GoBackButton,
+  MainContent,
+  PostHeader,
+} from '@/widgets';
 import { useSearchParams } from 'next/navigation';
 
 export default function Post({ params }: { params: { postId: number } }) {
   const { postId } = params;
-  const { data: isLoading } = useForumPost(postId);
+  const { data: post, isLoading } = useForumPost(postId);
   const searchParams = useSearchParams();
   const prevUrl: string = searchParams.get('prev_url') || '/forum/all';
-  if (isLoading) return <Loading />;
+  if (isLoading || !post) return <Loading />;
   return (
     <div>
-      <div>
+      <section>
         <GoBackButton prevUrl={decodeURIComponent(prevUrl)} />
-      </div>
+      </section>
+      <section className="mt-16 space-y-10">
+        <PostHeader post={post} />
+        <MainContent post={post} />
+      </section>
+      <section className="relative mt-16">
+        <div className="absolute right-5  ">
+          <Likes post={post} />
+        </div>
+        <div>
+          <Comments post={post} />
+        </div>
+
+        <div className="mt-4">
+          <CommentCreater post={post} />
+        </div>
+      </section>
     </div>
   );
 }
