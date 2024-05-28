@@ -4,8 +4,8 @@ import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
 
 import { useInfiniteScroll } from '@/shared';
-import { useForumPosts } from '@/features';
 import { PostCard } from '@/entities';
+import useForumPosts from '../model/useForumPosts';
 
 export default function ForumPostList() {
   const pathName = usePathname();

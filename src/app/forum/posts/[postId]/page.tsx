@@ -1,6 +1,6 @@
 'use client';
 
-import { Likes, useForumPost } from '@/features';
+import { Like } from '@/features';
 import { Loading } from '@/shared';
 import {
   CommentCreater,
@@ -8,6 +8,7 @@ import {
   GoBackButton,
   MainContent,
   PostHeader,
+  useForumPost,
 } from '@/widgets';
 import { useSearchParams } from 'next/navigation';
 
@@ -28,7 +29,7 @@ export default function Post({ params }: { params: { postId: number } }) {
       </section>
       <section className="relative mt-16">
         <div className="absolute right-5  ">
-          <Likes post={post} />
+          <Like post={post} />
         </div>
         <div>
           <Comments post={post} />

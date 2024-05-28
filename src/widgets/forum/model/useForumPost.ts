@@ -2,7 +2,7 @@
 
 import { Post } from '@/shared';
 import { QueryObserverResult, useQuery } from '@tanstack/react-query';
-import { fetchPost } from '../api/post';
+import { fetchPost } from '../../../widgets/forum/api/post';
 
 const useForumPost = (
   postId: number,

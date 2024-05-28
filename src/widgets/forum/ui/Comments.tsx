@@ -1,8 +1,8 @@
 'use client';
 
-import { usePostComments } from '@/features';
 import { formatDate, Post } from '@/shared';
 import Comment from './Comment';
+import usePostComments from '../model/usePostComments';
 
 export default function Comments({ post }: { post: Post }) {
   const { data: comments } = usePostComments(post.postId);

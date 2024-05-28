@@ -7,3 +7,6 @@ export { default as PostHeader } from './forum/ui/PostHeader';
 export { default as MainContent } from './forum/ui/MainContent';
 export { default as Comments } from './forum/ui/Comments';
 export { default as CommentCreater } from './forum/ui/CommentInput';
+export { default as useForumPost } from './forum/model/useForumPost';
+export { default as useForumPosts } from './forum/model/useForumPosts';
+export { default as usePostComments } from './forum/model/usePostComments';
