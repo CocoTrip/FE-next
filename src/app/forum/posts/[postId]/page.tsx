@@ -2,14 +2,8 @@
 
 import { Like } from '@/features';
 import { Loading } from '@/shared';
-import {
-  CommentCreater,
-  Comments,
-  GoBackButton,
-  MainContent,
-  PostHeader,
-  useForumPost,
-} from '@/widgets';
+import { GoBackButton, MainContent, PostHeader, useForumPost } from '@/widgets';
+import CommentList from '@/widgets/commentList/ui/CommentList';
 import { useSearchParams } from 'next/navigation';
 
 export default function Post({ params }: { params: { postId: number } }) {
@@ -28,16 +22,10 @@ export default function Post({ params }: { params: { postId: number } }) {
         <MainContent post={post} />
       </section>
       <section className="relative mt-16">
-        <div className="absolute right-5  ">
+        <div className="absolute right-5 text-xl ">
           <Like post={post} />
         </div>
-        <div>
-          <Comments post={post} />
-        </div>
-
-        <div className="mt-4">
-          <CommentCreater post={post} />
-        </div>
+        <CommentList post={post} />
       </section>
     </div>
   );

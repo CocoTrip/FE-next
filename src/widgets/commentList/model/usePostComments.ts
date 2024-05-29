@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { fetchComments } from '../../../widgets/forum/api/comment';
+import fetchComments from '../api/fetchComments';
 
 const usePostComments = (postId: number) => {
   const commentsQuery = useQuery({

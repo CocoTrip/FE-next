@@ -4,7 +4,9 @@ import { Comment } from '@/shared';
 import fs from 'fs';
 import path from 'path';
 
-export async function fetchComments(postId: number): Promise<Comment[]> {
+export default async function fetchComments(
+  postId: number,
+): Promise<Comment[]> {
   const filePath = path.join(
     process.cwd(),
     'src',
