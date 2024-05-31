@@ -1,8 +1,9 @@
-import { Comment as CommentType, formatDate } from '@/shared';
+import { formatDate } from '@/shared';
 import { useState } from 'react';
 import { IoMdMore } from 'react-icons/io';
+import { CommentT } from '../types/comment';
 
-export default function Comment({ comment }: { comment: CommentType }) {
+export default function Comment({ comment }: { comment: CommentT }) {
   const [isShowedSeeMore, setIsShowedSeeMore] = useState<boolean>(false);
   return (
     <li className="relative space-y-2 border-t py-6">

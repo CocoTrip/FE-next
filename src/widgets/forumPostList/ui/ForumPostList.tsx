@@ -4,8 +4,8 @@ import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
 
 import { useInfiniteScroll } from '@/shared';
-import { PostCard } from '@/entities';
 import useForumPosts from '../model/useForumPosts';
+import ForumPost from './ForumPost';
 
 export default function ForumPostList() {
   const pathName = usePathname();
@@ -29,7 +29,7 @@ export default function ForumPostList() {
   return (
     <ul>
       {posts.map(post => (
-        <PostCard key={post.postId} post={post} />
+        <ForumPost key={post.postId} post={post} />
       ))}
       <div ref={loadMoreRef} />
       {loading && <li>Loading...</li>}

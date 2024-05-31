@@ -3,7 +3,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { Post } from '@/shared';
 import { useCallback, useEffect, useState } from 'react';
-import { fetchPosts } from '../../../widgets/forum/api/post';
+import { fetchPosts } from '../api/post';
 
 const useForumPosts = () => {
   const [posts, setPosts] = useState<Post[]>([]);

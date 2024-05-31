@@ -2,6 +2,7 @@
 
 import { useCarousel } from '@/shared';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
@@ -20,7 +21,18 @@ const WIDTH: { [key: number]: string } = {
 };
 
 export default function HotPostsCarousel() {
-  const { carouselStartIndex, visibleSlides, nextItem, prevItem } = useCarousel(BREAK_POINTS, 10, true, 6000, true);
+  const { carouselStartIndex, visibleSlides, nextItem, prevItem } = useCarousel(
+    BREAK_POINTS,
+    10,
+    true,
+    6000,
+    true,
+  );
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <div className="relative flex w-full justify-center overflow-hidden px-8 py-4">
       <ul className=" flex w-full justify-between overflow-hidden">
@@ -35,8 +47,9 @@ export default function HotPostsCarousel() {
 
         {new Array(10).fill(1).map((_, idx) => (
           <li
+            // eslint-disable-next-line react/no-array-index-key
             key={idx}
-            className={` ${WIDTH[visibleSlides]} h-[200px] flex-shrink-0 text-white transition-transform`}
+            className={` ${isClient ? WIDTH[visibleSlides] : 'w-full'} h-[200px] flex-shrink-0 text-white transition-transform`}
             style={{
               transform: `translateX(-${carouselStartIndex * 100}%)`,
             }}

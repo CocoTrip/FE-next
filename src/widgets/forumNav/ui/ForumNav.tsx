@@ -1,4 +1,4 @@
-import { CATEGORIES } from '@/shared/index';
+import { FORUM_CATEGORIES } from '@/widgets/forumNav/types/forumCategory';
 import Category from './Category';
 
 export default function ForumNav({
@@ -8,12 +8,12 @@ export default function ForumNav({
 }) {
   return (
     <nav aria-label="Forum Category">
-      <ul className="flex space-x-[50px]">
-        {Object.keys(CATEGORIES).map(categoryKey => (
+      <ul className="flex justify-around ">
+        {Object.keys(FORUM_CATEGORIES).map(categoryKey => (
           <Category
             key={categoryKey}
             categoryKey={categoryKey}
-            category={CATEGORIES[categoryKey]}
+            category={FORUM_CATEGORIES[categoryKey]}
             isCurrentCategory={currentCategory === categoryKey}
           />
         ))}

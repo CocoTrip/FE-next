@@ -1,2 +1,1 @@
-export { default as PostCard } from './forum/ui/PostCard';
-export { default as Comment } from './comment/ui/Comment';
+export { default as Comment } from '../widgets/commentList/ui/Comment';
