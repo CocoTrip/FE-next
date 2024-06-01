@@ -1,16 +1,21 @@
-import { Post } from '@/shared';
-import { Comment } from '@/entities';
 import CommentInput from './CommentInput';
 import usePostComments from '../model/usePostComments';
+import Comment from './Comment';
 
-export default function CommentList({ post }: { post: Post }) {
-  const { data: comments } = usePostComments(post.postId);
+export default function CommentList({
+  postId,
+  commentCount,
+}: {
+  postId: number;
+  commentCount: number;
+}) {
+  const { data: comments } = usePostComments(postId);
 
   return (
     <div>
       <div className="text-xl">
         <p>
-          댓글 <span className="font-bold">{post.comments}</span>
+          댓글 <span className="font-bold">{commentCount}</span>
         </p>
       </div>
       <div className=" mt-4 flex items-center space-x-6 border-t py-6">

@@ -1,5 +1,3 @@
-import { Post } from '@/shared';
-
 export default function CommentInput() {
   return (
     <textarea

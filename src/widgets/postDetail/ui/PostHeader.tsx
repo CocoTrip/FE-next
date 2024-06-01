@@ -1,4 +1,5 @@
-import { formatDate, Post } from '@/shared';
+import { formatDate } from '@/shared';
+import { Post } from '../types/post';
 
 export default function PostHeader({ post }: { post: Post }) {
   return (

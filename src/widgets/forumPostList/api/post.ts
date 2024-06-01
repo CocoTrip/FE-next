@@ -1,6 +1,7 @@
 'use server';
 
-import { PAGE_SIZE, Post } from '@/shared';
+import { PAGE_SIZE } from '@/shared';
+import { Post } from '@/widgets/postDetail/types/post';
 import fs from 'fs';
 import path from 'path';
 
@@ -33,21 +34,4 @@ export async function fetchPosts(
   );
 
   return pagenatedPosts;
-}
-
-export async function fetchPost(postId: number): Promise<Post | undefined> {
-  const filePath = path.join(
-    process.cwd(),
-    'src',
-    'shared',
-    'mocks',
-    'posts.json',
-  );
-
-  const jsonData = await fs.promises.readFile(filePath, 'utf8');
-  const posts: Post[] = JSON.parse(jsonData);
-  const filteredPost: Post | undefined = posts.find(
-    post => post.postId === Number(postId),
-  );
-  return filteredPost;
 }

@@ -1,13 +1,11 @@
 export { default as Category } from './forumNav/ui/Category';
 export { default as ForumNav } from './forumNav/ui/ForumNav';
 export { default as ForumPostList } from './forumPostList/ui/ForumPostList';
-export { default as HotPostsSlider } from './forum/ui/HotPostsCarousel';
-export { default as GoBackButton } from './postDetail/GoBackButton';
-export { default as PostHeader } from './postDetail/PostHeader';
-export { default as MainContent } from './postDetail/MainContent';
-export { default as CommentInput } from './commentList/ui/CommentInput';
-export { default as useForumPost } from './forumPostList/model/useForumPost';
+export { default as HotPostsSlider } from './hotPosts/ui/HotPostsCarousel';
+export { default as GoBackButton } from '../shared/ui/GoBackButton';
 export { default as useForumPosts } from './forumPostList/model/useForumPosts';
-export { default as usePostComments } from './commentList/model/usePostComments';
 export { FORUM_CATEGORIES } from './forumNav/types/forumCategory';
 export { default as PostSearchBar } from './postSearchBar/ui/PostSearchBar';
+export { default as WriteForm } from './writePost/ui/WriteForm';
+export { default as PostDetail } from './postDetail/ui/PostDetail';
+export type { Post } from './postDetail/types/post';

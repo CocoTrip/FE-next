@@ -1,3 +1,5 @@
+'use client';
+
 import { formatDate } from '@/shared';
 import { useState } from 'react';
 import { IoMdMore } from 'react-icons/io';

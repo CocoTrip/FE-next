@@ -1,12 +1,10 @@
 'use client';
 
-import { Post } from '@/shared';
 import { QueryObserverResult, useQuery } from '@tanstack/react-query';
-import { fetchPost } from '../api/post';
+import { Post } from '../types/post';
+import { fetchPost } from '../api/fetchPost';
 
-const useForumPost = (
-  postId: number,
-): QueryObserverResult<Post | undefined> => {
+const usePost = (postId: number): QueryObserverResult<Post | undefined> => {
   const postQuery = useQuery<Post | undefined>({
     queryKey: ['post', postId],
     queryFn: () => fetchPost(postId),
@@ -14,4 +12,4 @@ const useForumPost = (
   return postQuery;
 };
 
-export default useForumPost;
+export default usePost;
