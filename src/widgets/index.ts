@@ -6,6 +6,6 @@ export { default as GoBackButton } from '../shared/ui/GoBackButton';
 export { default as useForumPosts } from './forumPostList/model/useForumPosts';
 export { FORUM_CATEGORIES } from './forumNav/types/forumCategory';
 export { default as PostSearchBar } from './postSearchBar/ui/PostSearchBar';
-export { default as WriteForm } from './writePost/ui/WriteForm';
+export { default as WriteForm } from './write-post/ui/WriteForm';
 export { default as PostDetail } from './postDetail/ui/PostDetail';
 export type { Post } from './postDetail/types/post';
