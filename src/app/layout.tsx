@@ -16,8 +16,9 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={NOTO_SANS_KR.className}>
-        <Header />
-        {children}
+        <div className="mobile:gap-mobile-gutter tablet:gap-tablet-gutter laptop:grid-cols-laptop-12 laptop:gap-laptop-gutter mx-4 grid mobile:grid-cols-mobile-4 tablet:grid-cols-tablet-8">
+          <main className="">{children}</main>
+        </div>
       </body>
     </html>
   );

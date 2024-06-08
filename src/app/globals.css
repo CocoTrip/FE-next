@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --kakao-bg: #fee500;
+  --naver-bg: #03c75a;
+}
