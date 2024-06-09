@@ -1,7 +1,7 @@
 'use server';
 
 import { PAGE_SIZE } from '@/shared';
-import { Post } from '@/widgets/postDetail/types/post';
+import { Post } from '@/widgets/post-detail/types/post';
 import fs from 'fs';
 import path from 'path';
 
@@ -12,7 +12,8 @@ export async function fetchPosts(
   const filePath = path.join(
     process.cwd(),
     'src',
-    'shared',
+    'widgets',
+    'forum-post-list',
     'mocks',
     'posts.json',
   );

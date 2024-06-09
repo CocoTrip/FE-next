@@ -3,7 +3,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useCallback, useEffect, useState } from 'react';
 import { fetchPosts } from '../api/post';
-import { Post } from '@/widgets/postDetail/types/post';
+import { Post } from '@/widgets/post-detail/types/post';
 
 const useForumPosts = () => {
   const [posts, setPosts] = useState<Post[]>([]);

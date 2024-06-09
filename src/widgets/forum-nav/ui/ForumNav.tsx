@@ -1,4 +1,4 @@
-import { FORUM_CATEGORIES } from '@/widgets/forumNav/types/forumCategory';
+import { FORUM_CATEGORIES } from '@/widgets/forum-nav/types/forumCategory';
 import Category from './Category';
 
 export default function ForumNav({

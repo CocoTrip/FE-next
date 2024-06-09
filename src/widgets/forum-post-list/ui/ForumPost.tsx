@@ -1,5 +1,5 @@
 import { formatDate, FORUM_BASE_URL } from '@/shared';
-import { Post } from '@/widgets/postDetail/types/post';
+import { Post } from '@/widgets/post-detail/types/post';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { LiaCommentSolid } from 'react-icons/lia';

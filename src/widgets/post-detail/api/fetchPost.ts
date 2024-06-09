@@ -8,7 +8,8 @@ export async function fetchPost(postId: number): Promise<Post | undefined> {
   const filePath = path.join(
     process.cwd(),
     'src',
-    'shared',
+    'widgets',
+    'forum-post-list',
     'mocks',
     'posts.json',
   );
