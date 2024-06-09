@@ -1,7 +1,6 @@
 import React from 'react';
 import './globals.css';
 import { Noto_Sans_KR } from 'next/font/google';
-import { Header } from '@/widgets';
 
 const NOTO_SANS_KR = Noto_Sans_KR({
   preload: true,
@@ -16,8 +15,9 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={NOTO_SANS_KR.className}>
-        <Header />
-        {children}
+        <div className="mx-4 grid mobile:grid-cols-mobile-4 mobile:gap-mobile tablet:grid-cols-tablet-8 tablet:gap-tablet desktop:grid-cols-desktop-12 desktop:gap-desktop">
+          <main className="col-span-full">{children}</main>
+        </div>
       </body>
     </html>
   );
