@@ -4,11 +4,11 @@ import NaverLoginButton from './NaverLoginButton';
 
 export default function Login() {
   return (
-    <div>
-      <div>
+    <div className="h-dvh">
+      <div className="flex h-[75%] items-center justify-center">
         <Logo />
       </div>
-      <div className="flex flex-col space-y-2">
+      <div className="h-[25%] space-y-4">
         <KakaoLoginButton />
         <NaverLoginButton />
       </div>

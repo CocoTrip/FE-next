@@ -28,11 +28,6 @@ const config: Config = {
         tablet: '16px', // 16pt
         desktop: '24px', // 24pt
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
     },
   },
   plugins: [],
