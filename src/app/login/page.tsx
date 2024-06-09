@@ -1,5 +1,9 @@
-import { Login } from "@/widgets";
+import { Login } from '@/widgets';
 
 export default function Page() {
-    return <Login />
+  return (
+    <main className="col-span-full">
+      <Login />
+    </main>
+  );
 }
