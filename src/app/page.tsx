@@ -1,3 +1,9 @@
+import { Header } from '@/widgets';
+
 export default function Page() {
-  return <>home</>;
+  return (
+    <div className="col-span-full">
+      <Header />
+    </div>
+  );
 }
